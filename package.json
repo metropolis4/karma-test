@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "express": "^4.12.4",
+    "jade": "^1.10.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.33",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.3.5"
+  },
+  "scripts": {
+    "watch": "npm run watch-contr & npm run watch-spec & npm run watch-home & npm run watch-app & npm run watch-serv",
+    "watch-spec": "coffee -w -o spec -c spec/coffee",
+    "watch-home": "coffee -w -o spec/Home -c spec/Home/coffee",
+    "watch-app": "coffee -w -o app/Home -c app/Home/coffee",
+    "watch-serv": "coffee -wc app.coffee",
+    "watch-contr": "coffee -w -o controllers -c controllers/coffee",
+    "start": "nodemon app.js",
+    "test": "karma start spec/karma.config.js"
+  }
+}
